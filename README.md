@@ -1,227 +1,84 @@
-# Type Theme
+# leopard
 
-![Default Type Theme blog](https://user-images.githubusercontent.com/816965/30518919-d5978024-9bcd-11e7-81b3-3dd07e99a1f9.png)
+[leopard](http://baixin.io) 是一个简洁的博客模板，如果你也喜欢请 Star ，你的 Star 是我持续更新的动力, 谢谢 😄.
 
-A free and open-source [Jekyll](https://jekyllrb.com) theme. Great for blogs and easy to customize.
+### 使用手册
 
-[Demo](https://rohanchandra.github.io/type-theme/)
+[Jekyll搭建个人博客](http://baixin.io/2016/10/jekyll_tutorials1/)  :  使用Jekyll搭建个人博客的教程，以及如果把博客模板修改成你自己的博客，里面也有大量的评论，及 Jekyll 搭建博客出现过的问题。
 
-## Usage
+[HEXO搭建个人博客](http://baixin.io/2015/08/HEXO%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/) : 使用 HEXO 基于 Github Page 搭建个人博客， 教程里面累计了大量提问和评论，如果你在搭建博客时遇到问题，可以看看这个教程。 
 
-1. Fork and clone the [Type Theme repo](https://github.com/rohanchandra/type-theme): `git clone https://github.com/rohanchandra/type-theme`
-2. [Install Jekyll](https://jekyllrb.com/docs/installation/): `gem install jekyll`
-3. Install the theme's dependencies: `bundle install`
-4. Customize the theme (see below)
-5. Run the Jekyll server: `jekyll serve`
 
-## Customizing Type Theme
+### 使用条件
 
-Open `_config.yml` in a text editor to change most of the blog's settings.
+Jekyll 支持 Mac 、Windows、ubuntu 、Linux 操作系统                     
+Jekyll 需要依赖：Ruby、bundler
 
-If a variable in this document is marked as "optional", disable the feature by removing all text from the variable. For example, to prevent the avatar from rendering in the header, the avatar line should read:
 
-```yml
-theme:
-  title: Type Theme
-  avatar:
-  gravatar:
-```
+#### 安装Jekyll
 
-Notice the avatar variable is left intentionally blank.
+[Jekyll中文官方文档](http://jekyll.bootcss.com/) ， 如果你已经安装过了 Jekyll，可以忽略此处。
 
-Below is a summary of the configuration options in Type Theme.
+> $ gem install jekyll
 
-### Site configuration
-The most common configurations, included here for guidance, are:
+#### 获取博客模板
 
-Jekyll website *without* a subpath (such as a GitHub Pages website for a given username):
+> $ git clone https://github.com/leopardpan/leopardpan.github.io.git
 
-```yml
-# SITE CONFIGURATION
-baseurl: ""
-url: "https://username.github.io"
-```
+或者直接[下载博客](https://github.com/leopardpan/leopardpan.github.io/archive/master.zip)   
 
-Jekyll website *with* subpath (like the Type Theme demo page):
+进leopardpan.github.io/ 目录下， 开启本地服务 
 
-```yml
-# SITE CONFIGURATION
-baseurl: "/sub-directory"
-url: "https://username.github.io/"
-```
+> $ jekyll server
 
-Please configure this in `_config.yml` before using the theme.
+在浏览器输入 [127.0.0.1:4000](127.0.0.1:4000) ， 就可以看到博客效果了。
 
-### Meta
 
-Meta variables hold basic information about your Jekyll site which will be used throughout the site and as meta properties for search engines, browsers, and the site's RSS feed.
+### 提示
 
-Change these variables in `_config.yml`:
+>* 如果你想使用我的模板，请把 _posts/ 目录下的文章都去掉。
+>* 修改 _config.yml 文件里面的内容为你自己的个人信息。
 
-| Variable | Example | Description | Optional |
-|-------------|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------|----------|
-| title | My Jekyll Blog | Name of website | Yes |
-| avatar | assets/img/avatar.png | Path of avatar image, to be displayed in the theme's header | Yes |
-| gravatar | f9879d71855b5ff21e4963273a886bfc | [MD5 hash of your email address](https://secure.gravatar.com/site/implement/hash/) to load your Gravatar in the theme's header | Yes |
-| description | My blog posts | Short description, primarily used by search engines | Yes |
+如果在部署博客的时候发现问题，可以直接在[Issues](https://github.com/leopardpan/leopardpan.github.io/issues)里面提问。        
 
-### Header and footer text
 
-Change these variables in `_config.yml`:
+### 把这个博客变成你自己的博客
 
+根据上面【提示】修改过后，在你的github里创建一个username.github.io的仓库，username指的值你的github的用户名。      
+创建完成后，把我的这个模板使用git push到你的username.github.io仓库下就行了。
+搭建博客如果遇到问题可以看看我教程[Jekyll搭建个人博客](http://baixin.io/2016/10/jekyll_tutorials1/)。
 
-| Variable | Example | Description | Optional |
-|---------------------------|------------------------------|-------------------------------------------------------------------------|----------|
-| header_text | Welcome to my Jekyll blog | HTML (shown below the navigation) with a background colour for emphasis | Yes |
-| header_text_feature_image | assets/img/sample_feature_img_3.png | Background image for the header text | Yes |
-| footer_text | Copyright 2014 | HTML (shown at end of the site) with lighter text | Yes |
 
-### Icons
+### 效果预览
 
-Add your username on selected websites in the icon section of the `_config.yml` file to display the site's icon from [Font Awesome](https://fortawesome.github.io/Font-Awesome/) in the header navigation. All icon variables should be your username enclosed in quotes (e.g. "username"), except for the following variables:
+#### 头像效果
 
+![](/images/readme//icon.gif)
 
-| Variable | Example | Description | Optional |
-|----------------|-------------------------------------------------|--------------------------------------------------------|----------|
-| rss | true | Takes boolean value (true/false) to show RSS feed icon | Yes |
-| email_address | type@example.com | Email address | Yes |
-| linkedin | https://www.linkedin.com/in/FirstLast | Full URL to profile on LinkedIn | Yes |
-| stack_exchange | https://stackoverflow.com/users/0000/first-last | Full URL to profile on Stack Exchange | Yes |
+如果你只想要我博客里的头像效果，你只需要拿 leopardpan.github.io/_includes/side-panel.html 文件里面 `头像效果` 和 leopardpan.github.io/css/main.css 里面最后面 `头像效果` 部分就行了。
 
-### Scripts
 
-Change these variables in `_config.yml`:
+***
 
+#### 博客首页   
 
-| Variable | Example | Description | Optional |
-|------------------|--------------|-------------------------------------------------------------------------------------------------------------------------------------|----------|
-| google_analytics | UA-123456-01 | Google Analytics [tracking ID](https://support.google.com/analytics/answer/1032385?hl=en) | Yes |
-| disqus_shortname | shortname | Disqus [shortname](https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-) | Yes |
-| katex | true | Takes boolean value (true/false) to conditionally load [KaTeX](https://khan.github.io/KaTeX/) scripts required for math typesetting | Yes |
+![](/images/readme//img4.png)   
 
-Scripts listed here are only loaded if you provide a value in the `_config.yml` file.
+***  
 
-### Localization strings
+#### 文章详情   
 
-Change localization string variables in `_config.yml`.
 
-English text used in the theme (such as the "continue reading" label) has been grouped  so you can quickly translate the theme or change labels to suit your needs.
 
-### Colours, typography, padding
+![](/images/readme//img3.png)
 
-![A selection of colours set in Type Theme by modifying the CSS](https://cloud.githubusercontent.com/assets/816965/5142488/130869a6-71d7-11e4-8a38-a69ec1673436.png)
 
+![](/images/readme//img2.png)
 
-| Variable | Example | Description | Optional |
-|--------------|----------------------------|--------------------------------------|--------------------------------------------------------------|
-| google_fonts | "Playfair+Display:400,700\ | PT+Sans:400,700,700italic,400italic" | [Google Fonts](https://www.google.com/fonts) to load for use |
 
-Navigate to the `_sass > base` directory and open `_variables.scss` to change colours, typography and padding used in the theme with CSS.
+![](/images/readme//img1.png)
 
-Once you have loaded a Google Font in `config.yml`, you can integrate the fonts into your CSS by changing the font-family in `_variables.scss`. For example, after loading the Playfair Display and PT Sans fonts from Google:
 
-```css
-// Typography
-$font-family-main: 'PT Sans', Helvetica, Arial, sans-serif;
-$font-family-headings: 'Playfair Display', Helvetica, Arial, sans-serif;
-```
+#### 感谢   
 
-Mozilla's [ColorPicker](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool) is a helpful tool to get your preferred colours in hexadecimal or RGBA form for use in `_variables.scss`.
-
-## Posts and pages in Type Theme
-Please refer to the [Jekyll docs for writing posts](https://jekyllrb.com/docs/posts/). Non-standard features are documented below.
-
-### Math typesetting
-Wrap math expressions with `$$` signs in your posts and make sure you have set the `katex` variable in `_config.yml` to `true` for math typesetting.
-
-For inline math typesetting, type your math expression on the *same line* as your content. For example:
-
-```latex
-Type math within a sentence $$2x^2 + x + c$$ to display inline
-```
-
-For display math typesetting, type your math expression on a *new line*. For example:
-
-```latex
-$$
-  \bar{y} = {1 \over n} \sum_{i = 1}^{n}y_i
-$$
-```
-
-Type Theme makes use for [KaTeX](https://khan.github.io/KaTeX/) for typesetting.
-
-### Feature images
-
-![Posts with geometric feature images](https://cloud.githubusercontent.com/assets/816965/5142406/19726478-71d6-11e4-8111-94f788b0e44d.png)
-
-Add a feature image by specifying a path to an image in the [front matter](http://jekyllrb.com/docs/frontmatter/) in the form of `feature-img: "img/PATH_TO_IMAGE.png"`.
-
-For example:
-
-```yml
----
-layout: post
-title: Hello World
-feature-img: "assets/img/sample_feature_img.png"
----
-```
-
-### Hiding pages from navigation
-
-In the Front Matter of a page, add `hide: true` to prevent the page from showing up in the header's navigation bar (visitors can still visit the URL through other means).
-
-For example:
-
-```yml
----
-layout: page
-title: "Error 404: Page not found"
-permalink: /404.html
-hide: true
----
-```
-
-### Tags
-
-Post tags should be placed between `[]` in your post metadata. Seperate each tag with a comma.
-
-For example:
-
-```yml
----
-layout: post
-title: Markdown and HTML
-tags: [sample, markdown, html]
----
-```
-
-A tags listing will be automatically generated using the `tags.html` file provided in Type theme. If you're not using the tags feature it is safe to delete `tags.html`.
-
-### Search
-
-The search feature can be activated in the `_config.yml` file by changing its value from `false` to `true`.
-
-```yml
-  #Scripts
-  search: true
-```
-
-Once activated, the search bar will appear in the header. This feature uses [Lunr](https://lunrjs.com/) and searches through the title, tags and content of your posts.
-
-### Subtitles
-A subtitle can be displayed below your title on permalink post pages.
-
-To enable this feature, add `subtitle` to your post metadata.
-
-For example:
-
-```yml
----
-layout: post
-title: "This is a title"
-subtitle: "This is a subtitle"
----
-```
-
-## License
-[The MIT License (MIT)](https://github.com/rohanchandra/type-theme/blob/master/LICENSE)
+本博客在[Vno Jekyll](https://github.com/onevcat/vno-jekyll)基础上修改的。  

@@ -1,85 +1,70 @@
-# SITE CONFIGURATION
-baseurl: "/type-theme"
-url: "https://rohanchandra.github.io/"
+# Basic
+title: 潘柏信
+subtitle: 个人站
+description: 欢迎来到我的个人站~
+# 头像里面的标题
+avatarTitle: leopardpan
+# 头像里面的描述
+avatarDesc: iOS / 机器学习
+url: "http://baixin.io"
 
-# THEME-SPECIFIC CONFIGURATION
-theme_settings:
-  # Meta
-  title: Type Theme
-  avatar: assets/img/avatar.png
-  favicon: assets/favicon.ico
-  gravatar: # Email MD5 hash
-  description: "A website with blog posts and pages" # used by search engines
+# Comment
+comment:
+    disqus: leopard
+    # uyan: 2143225  # 有言id,登录有言官网申请
 
-  # Header and footer text
-  header_text: >
-     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+# Social
+social:
+    weibo: 5366874726 
+    github: leopardpan
+    # twitter: 
+    mail: leopardpan@icloud.com
 
-     <p>Remove all header text in <code>_config.yml</code> to disable this feature.</p>
-  header_text_feature_image:
-  footer_text: >
-   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
+# 百度统计 
+# 使用博客模板请去掉或者更换 id 
+baidu:
+    id: 8ba1c6be0953b6f9c2ba38e57f615421  
 
-  # Icons
-  rss: false
-  email_address: # Full email address, e.g. "sam@example.com"
-  behance:
-  bitbucket:
-  dribbble:
-  facebook:
-  flickr:
-  gitlab:
-  github: "rohanchandra/type-theme"
-  google_plus:
-  instagram:
-  linkedin:  # Full URL
-  pinterest:
-  reddit:
-  soundcloud:
-  stack_exchange:  # Full URL
-  steam:
-  tumblr:
-  twitter: "twitter"
-  wordpress:
-  youtube:
+# Google Analytics
+# 使用博客模板请去掉或者更换 id
+ga:
+    id: UA-84134159-3   
+    host: auto  
 
-  # Scripts
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
-  disqus_shortname:
-  katex: true # Enable if using math markup
-  search: false # Enable the search feature
 
-  # Localization strings
-  str_follow_on: "Follow on"
-  str_rss_follow: "Follow RSS feed"
-  str_email: "Email"
-  str_next_post: "Next post"
-  str_previous_post: "Previous post"
-  str_next_page: "Next"
-  str_previous_page: "Prev"
-  str_continue_reading: "Continue reading"
-  str_javascript_required_disqus: "Please enable JavaScript to view comments."
-  str_search_no_results: "No results found."
+# 《----------------- 上面的信息修改成你自己的 ---------------------------》
+#
+#
+#  _post/ 下的文章更换成你自己的文章
+#  帮忙star一下，感谢~😆 地址： https://github.com/leopardpan/leopardpan.github.io
+#
+#
+# 《--------------- 下面的信息可以自行选择是否修改 ------------------------》
 
-  # Colours, typography and padding
-  # Open the "_sass > base" folder, and open "_variables.scss"
-  google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
 
-  # Post navigation
-  post_navigation: false
-
-# PAGINATION
-paginate: 5
-paginate_path: "blog/page:num"
-
-# BUILD SETTINGS
-markdown: kramdown
+permalink: /:year/:month/:title/
+# Format
 highlighter: rouge
-sass:
-  sass_dir: _sass
-  style: :compressed
-plugins: [jekyll-paginate]
-theme: jekyll-theme-type
-exclude:
-  - Gemfile
-  - Gemfile.lock
+
+textColor: #FF0000
+
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+cover_color: clear
+
+# The blog button should not be removed.
+blog_button:
+    title: 博客主页
+
+# Navigation buttons in the front page.s
+nav:
+    - {title: 所有文章, description: archive, url: '/archive'}   
+    - {title: 标签, description: tags, url: '/tags'}      
+    - {title: 关于我, description: about, url: '/about'}      
+    
+
+# Pagination
+gems: [jekyll-paginate,jekyll-sitemap]
+paginate: 20
+paginate_path: "page/:num/"
+
+
