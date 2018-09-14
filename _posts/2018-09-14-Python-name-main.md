@@ -6,8 +6,6 @@ categories:
 tags: Python
 ---
 
-# Python中的__name__和'__main__'
-
 
 ### 程序入口
 
