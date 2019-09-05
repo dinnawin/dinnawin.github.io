@@ -6,7 +6,7 @@ categories:
 tags: Python
 ---
 
-![ryoji-iwata-519498-unsplash](https://dinnas.github.io/assets/images/viewfront/ryoji-iwata-519498-unsplash.jpg)
+![ryoji-iwata-519498-unsplash](https://dinnawin.github.io/assets/images/viewfront/ryoji-iwata-519498-unsplash.jpg)
 
 
 ### 程序入口
