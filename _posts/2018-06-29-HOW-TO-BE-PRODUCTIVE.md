@@ -1,5 +1,5 @@
 ---
-title: HOW To Be more productive
+title: HOW TO BE MORE PRODUCTIVE
 date: 2018-06-29 16:47:20
 categories:
 - 学习
